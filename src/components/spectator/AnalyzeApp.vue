@@ -242,12 +242,10 @@ async function loadKPIs() {
     try {
       await reportStore.loadGlobalAverages()
     } catch (avgError) {
-      console.warn('', avgError)
     } finally {
       loadingAverages.value = false
     }
   } catch (err) {
-    console.error('', err)
     error.value = err instanceof Error ? err.message : 'Fehler beim Laden der KPIs'
     loadingAverages.value = false
   }

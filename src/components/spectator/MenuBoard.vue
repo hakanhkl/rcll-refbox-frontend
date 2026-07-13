@@ -88,7 +88,6 @@ import ConfirmSetMachinePosePopup from '@/components/spectator/popups/ConfirmSet
 import KPIPopup from '@/components/spectator/popups/KPIPopup.vue'
 import { useAppStore } from '@/store/appStore'
 import Accordion from '@/components/shared/ui/Accordion.vue'
-import { useReportStore } from '@/store/reportStore'
 
 
 // use stores  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -101,8 +100,6 @@ const { currentView } = storeToRefs(appStore)
 
 import { ref } from 'vue'
 const posePopup = ref()
-const reportStore = useReportStore()
-const {gameReport } = storeToRefs(reportStore)
 
 // Not show the pop when in Editmode just exit Editmode
 function handleEditClick() {
